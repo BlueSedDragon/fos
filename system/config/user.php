@@ -1,6 +1,6 @@
 <?php
 // if you configure done, please set it to true.
-$CONFIGURED = true;
+$CONFIGURED = false;
 
 // the name of your website.
 $WEBSITE_NAME = 'website';

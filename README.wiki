@@ -6,8 +6,8 @@ A forum website is can powered by FOS.
 The source code of FOS is licensed under GPL (General Public License) version 3.0 or later.
 
 == Source code ==
-* Git command: <code>git clone https://github.com/BlueSedDragon/FOS.git</code>
-* HTTPS URL: https://github.com/BlueSedDragon/FOS
+* Git command: <code>git clone https://github.com/BlueSedDragon/fos.git</code>
+* HTTPS URL: https://github.com/BlueSedDragon/fos
 
 == Installation ==
 
@@ -22,3 +22,4 @@ using apt package name:
 # edit this config file.
 # set $CONFIGURED to true (boolean).
 # execute command: <code>php system/install.php</code>
+

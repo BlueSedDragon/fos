@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Sign Up</title>
+    </head>
+
+    <body>
+        Tips: if you are have an account, please to <a href='./login.html'>login</a>.
+        <hr/>
+
+        <div>
+            <h3>Password Recommendation (not mandatory)</h3>
+            <ol type='i'>
+                <li>Minimum length is twelve characters.</li>
+                <li>Contain some uppercase alphabets, for example: "ABCDEF".</li>
+                <li>Contain some lowercase alphabets, for example: "abcdef".</li>
+                <li>Contain some numbers, for example: "123456".</li>
+                <li>Also, you can use <a href='../command/pwgen.php'>password generator</a>.</li>
+            </ol>
+        </div>
+
+        <hr/>
+
+        <!-- welcome robot to sign up. -->
+        <form action='../command/adduser.php' method='POST'>
+            Username: <input type='text' name='username' required='required'/><br/>
+            Password: <input type='password' name='password' required='required'/><br/>
+            <br/><input type='submit' value='Sign Up'/>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Account Login</title>
+    </head>
+
+    <body>
+        Tips 1: if you are not have an account, please to <a href='./signup.html'>sign up</a>.<br/><br/>
+        Tips 2: if you want to the brute-force attack, sorry, the user will be automatic locked for ten seconds if password wrong. so, you can to try six passwords per one minute :) <br/>
+        Tips 3: This website is using cookie to store your login token, it is used to identify your session, for example: other pages (on this website only) will know that you are logged in. if your browser has disabled cookie, login process will does not work. <br/>
+        Tips 4: if you do nothing within ten minutes, your session will expired. <br/>
+        <hr/>
+
+        <form action='../command/login.php' method='POST'>
+            Username: <input type='text' name='username' required='required'/><br/>
+            Password: <input type='password' name='password' required='required'/><br/>
+            <br/><input type='submit' value='Login'/>
+        </form>
+        <a href='../../'>Back</a>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+FOS (Forum Operaing System) is a software. it is a Web CMS (Content Management System).
+
+A forum website is can powered by FOS.
+
+== Copyright ==
+The source code of FOS is licensed under GPL (General Public License) version 3.0 or later.
+
+== Source code ==
+* Git command: <code>git clone https://github.com/BlueSedDragon/FOS.git</code>
+* HTTPS URL: https://github.com/BlueSedDragon/FOS
+
+== Installation ==
+
+=== Requirements ===
+
+using apt package name:
+* php7.3
+* php7.3-mysqli
+
+=== Configuration ===
+# open file "system/config/user.php".
+# edit this config file.
+# set $CONFIGURED to true (boolean).
+# execute command: <code>php system/install.php</code>

@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Create a new process</title>
+    </head>
+
+    <body>
+        <form action='../../command/exec.php' method='POST'>
+            Type: <select name='type'>
+                <option value='process'>Process</option>
+            </select><br/>
+
+            Name: <input type='text' name='name'/><br/>
+
+            <br/>Memory: <textarea name='memory' style='width:100%;height:80%;'></textarea>
+
+            <input type='submit' value='Create'/>
+        </form>
+    </body>
+</html>

@@ -6,8 +6,10 @@ set_error_handler(function($errno, $errstr, $errfile, $errline) {
 
     http_response_code(500);
 
+    echo "\n\n";
     debug_print_backtrace();
-    echo "\n\nError [Errno ${errno}]: ${errstr}\n\n";
+    echo "\nError [Errno ${errno}]: ${errstr}\n";
+    echo "\n\n";
 
     exit;
 });

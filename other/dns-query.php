@@ -1,5 +1,5 @@
 <?php
-set_error_handler(function($errno, $errstr, $errfile, $errline) {
+set_error_handler(function ($errno, $errstr, $errfile, $errline) {
     if (!(error_reporting())) {
         return;
     }

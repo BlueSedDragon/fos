@@ -89,12 +89,7 @@ if (!$socket) {
 }
 
 foreach ($servers as $server) {
-    $ok = socket_sendto($socket, $request, $request_length, 0, $server, 53);
-    if (!$ok) {
-        http_response_code(500);
-        echo 'Cannot to send a packet.';
-        exit;
-    }
+    socket_sendto($socket, $request, $request_length, 0, $server, 53);
 }
 
 $response = null;

@@ -1,4 +1,19 @@
 <?php
+set_error_handler(function($errno, $errstr, $errfile, $errline) {
+    if (!error_reporting()) {
+        return;
+    }
+
+    http_response_code(500);
+
+    debug_print_backtrace();
+    echo "\n\nError [Errno ${errno}]: ${errstr}\n\n";
+
+    exit;
+});
+
+http_response_code(500);
+
 if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     http_response_code(400);
     header('Content-Type: text/plain');
@@ -91,7 +106,7 @@ if (!$socket) {
 }
 
 foreach ($servers as $server) {
-    socket_sendto($socket, $request, $request_length, 0, $server, 53);
+    @socket_sendto($socket, $request, $request_length, 0, $server, 53);
 }
 
 $response = null;
@@ -133,3 +148,5 @@ $response_length = strlen($response);
 http_response_code(200);
 header("Content-Length: ${response_length}");
 echo $response;
+exit;
+

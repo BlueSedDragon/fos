@@ -126,5 +126,8 @@ while (1) {
     break;
 }
 
+$response_length = strlen($response);
+
 http_response_code(200);
+header("Content-Length: ${response_length}");
 echo $response;

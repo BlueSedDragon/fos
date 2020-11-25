@@ -107,8 +107,23 @@ if (!$socket) {
     exit;
 }
 
+$sends = 0;
+
+socket_clear_error($socket);
 foreach ($servers as $server) {
     @socket_sendto($socket, $request, $request_length, 0, $server, 53);
+
+    $errno = socket_last_error($socket);
+    socket_clear_error($socket);
+
+    if ($errno) continue;
+    $sends += 1;
+}
+
+if ($sends <= 0) {
+    http_response_code(500);
+    echo 'Cannot to send a packet.';
+    exit;
 }
 
 $response = null;

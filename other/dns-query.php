@@ -129,7 +129,7 @@ if ($sends <= 0) {
 $response = null;
 
 // timeout: 10 seconds
-if (!socket_set_option($socket, SOL_SOCKET, SO_RCVTIMEO, ['sec' => 10, 'usec' => 0])) {
+if (!(socket_set_option($socket, SOL_SOCKET, SO_RCVTIMEO, ['sec' => 10, 'usec' => 0]))) {
     http_response_code(500);
     echo 'Cannot to setting socket timeout.';
     exit;
